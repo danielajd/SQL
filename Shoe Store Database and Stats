@@ -1,0 +1,46 @@
+/**Shoe Shop
+Nike Dunks (110)
+Birkenstocks (140)
+Heels (80)
+Sandals (40)
+Cowboy Boots (90)
+Winter Boots (95)
+Clogs (55)
+Kitten Heels (65)
+Golf Shoes (83)
+Dr. Martens (135)
+Tevas (35)
+Tennis Shoes (45)
+Platform Sneakers (75)
+Water Shoes (15)
+Flats (30)
+**/
+
+CREATE TABLE shoe_store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER);
+
+INSERT into shoe_store VALUES (1, "Nike Dunks",110);
+INSERT into shoe_store VALUES (2, "Birkenstocks", 140);
+INSERT into shoe_store VALUES (3, "Heels", 80);
+INSERT into shoe_store VALUES (4, "Sandals",40);
+INSERT into shoe_store VALUES (5, "Cowboy Boots", 90);
+INSERT into shoe_store VALUES (6, "Winter Boots", 95);
+INSERT into shoe_store VALUES (7, "Clogs", 55);
+INSERT into shoe_store VALUES (8, "Kitten Heels", 65);
+INSERT into shoe_store VALUES (9, "Golf Shoes", 83);
+INSERT into shoe_store VALUES (10, "Dr. Martens", 135);
+INSERT into shoe_store VALUES (11, "Tevas", 35);
+INSERT into shoe_store VALUES (12, "Tennis Shoes",45);
+INSERT into shoe_store VALUES (13, "Platform Sneakers",75);
+INSERT into shoe_store VALUES (14, "Water Shoes", 15);
+INSERT into shoe_store VALUES (15, "Flats",30);
+
+-- display the database ordered by price
+SELECT * FROM shoe_store
+ORDER by price DESC;
+
+-- database displaying shoes over 75 in ascending order
+SELECT * FROM shoe_store WHERE price >75 
+order by price ASC;
+
+-- database showing the total amount of shoe prices if all sold
+SELECT SUM(price) from shoe_store;
